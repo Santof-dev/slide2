@@ -75,6 +75,27 @@
             font-weight: bold;
             font-size: 1.2em;
         }
+        
+        /* Lista de custos (NOVO) */
+        .cost-list li::before {
+            content: '⚙️'; /* Ícone de custo */
+            font-size: 1em;
+            color: #555;
+            top: 4px;
+        }
+        
+        .margin-analysis {
+            font-size: 1em;
+            font-style: italic;
+            color: #004a99;
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #007bff;
+        }
+        .margin-analysis strong.profit {
+            color: #28a745;
+        }
 
         /* Slide de Título (Capa) */
         .slide-title {
@@ -113,7 +134,7 @@
             margin: 0 auto;
         }
 
-        /* Estilo para o slide de imagens (NOVO) */
+        /* Estilo para o slide de imagens */
         .slide-image {
             text-align: center;
             padding-top: 40px; 
@@ -127,7 +148,7 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Estilos para o slide de valores (NOVO) */
+        /* Estilos para o slide de valores */
         .product-value-container {
             display: flex;
             justify-content: space-around;
@@ -284,7 +305,7 @@
 
         <div class="slide fade slide-image">
             <h2>Conheça a Canetec</h2>
-            <img src="canetec-produto.jpg.jpeg" alt="Imagem da Canetec modos Aluno e Professor">
+            <img src="novo_slide/canetec-produto.jpg.jpeg" alt="Imagem da Canetec modos Aluno e Professor">
         </div>
 
         <div class="slide fade">
@@ -300,6 +321,23 @@
                 </div>
             </div>
             <p class="price-note">*Planos de assinatura do aplicativo podem ser aplicados.</p>
+        </div>
+        
+        <div class="slide fade">
+            <h2>Custo e Margem (Estimativa)</h2>
+            <p>Estimamos um custo de produção unitário de <strong>R$ 400,00</strong>, com base em:</p>
+            <ul class="cost-list" style="font-size: 0.95em;">
+                <li><strong>Hardware (R$ 220):</strong> Sensor óptico, chip de IA, bateria e Bluetooth.</li>
+                <li><strong>Corpo (R$ 35):</strong> Materiais sustentáveis e design ergonômico.</li>
+                <li><strong>Montagem (R$ 45):</strong> Mão de obra e testes de qualidade.</li>
+                <li><strong>P&D (R$ 70):</strong> Amortização do custo inicial de engenharia e software.</li>
+                <li><strong>Servidores (R$ 30):</strong> Custo de nuvem para a IA e banco de dados.</li>
+            </ul>
+            <p class="margin-analysis">
+                <strong>Análise de Margem:</strong><br>
+                <strong>Aluno:</strong> Venda de R$ 749,99 - Custo de R$ 400,00 = <strong class="profit">R$ 349,99 (Lucro Bruto)</strong><br>
+                <strong>Professor:</strong> Venda de R$ 1.349,99 - Custo de R$ 400,00 = <strong class="profit">R$ 949,99 (Lucro Bruto)</strong>
+            </p>
         </div>
 
         <div class="slide fade">
@@ -383,6 +421,7 @@
         <span class="dot" onclick="currentSlide(10)"></span>
         <span class="dot" onclick="currentSlide(11)"></span>
         <span class="dot" onclick="currentSlide(12)"></span>
+        <span class="dot" onclick="currentSlide(13)"></span>
     </div>
 
     <script>
